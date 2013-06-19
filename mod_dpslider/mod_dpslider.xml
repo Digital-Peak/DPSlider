@@ -11,7 +11,7 @@
 	</license>
 	<authorEmail>info@digital-peak.com</authorEmail>
 	<authorUrl>joomla.digital-peak.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>MOD_DPSLIDER_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_dpslider">mod_dpslider.php</filename>
