@@ -34,9 +34,10 @@ $doc->addScriptDeclaration('dpjQuery(document).ready(function() {
 	dpjQuery(".mod-dpslider-pagination .swiper-pagination-switch").click(function(){
     	dpSlider'.$module->id.'.swipeTo(dpjQuery(this).index());
     })
-});')
+});');
 
-//<div id="swiper-scrollbar-<php echo $module->id>" class="swiper-scrollbar"></div>  
+//<div id="swiper-scrollbar-<php echo $module->id>" class="swiper-scrollbar"></div>
+echo $params->get('textbefore');
 ?>
 
 <div id="mod-dpslider-<?php echo $module->id?>" class="swiper-container" style="<?php echo (empty($height) ? '' : 'height:'.$height.';').(empty($width) ? '' : 'width:'.$width.';')?>">
@@ -59,3 +60,4 @@ for ($i = 0; $i < 10; $i++) {
   </div>
 </div>
 <p class="mod-dpslider-pagination"></p>
+<?php echo $params->get('textafter')?>

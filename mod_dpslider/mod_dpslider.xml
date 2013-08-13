@@ -23,32 +23,47 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="width" type="text"
-					label="MOD_DPSLIDER_WIDTH_LABEL" description="MOD_DPSLIDER_WIDTH_DESC" />
-				<field name="height" type="text"
-					label="MOD_DPSLIDER_HEIGHT_LABEL" description="MOD_DPSLIDER_HEIGHT_DESC" />
+				<field name="width" type="text" label="MOD_DPSLIDER_WIDTH_LABEL"
+					description="MOD_DPSLIDER_WIDTH_DESC" />
+				<field name="height" type="text" label="MOD_DPSLIDER_HEIGHT_LABEL"
+					description="MOD_DPSLIDER_HEIGHT_DESC" />
+				<field name="textbefore" type="textarea"
+					label="MOD_DPSLIDER_FOLDER_LABEL_BEFORE_LABEL" description="MOD_DPSLIDER_FOLDER_LABEL_BEFORE_DESC"
+					rows="5" cols="50" filter="raw" />
+				<field name="textafter" type="textarea"
+					label="MOD_DPSLIDER_FOLDER_LABEL_AFTER_LABEL" description="MOD_DPSLIDER_FOLDER_LABEL_AFTER_DESC"
+					rows="5" cols="50" filter="raw" />
 				<field name="moduleclass_sfx" type="text"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 			</fieldset>
 			<fieldset name="slides">
-			<field name="folder" type="folderlist" size="5"
+				<field name="folder" type="folderlist" size="5"
 					label="MOD_DPSLIDER_FOLDER_LABEL" directory="images/dpslider"
 					hide_default="1" description="MOD_DPSLIDER_FOLDER_DESC" />
-			<field name="slide0" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide1" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide2" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide3" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide4" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide5" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide6" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide7" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide8" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
-			<field name="slide9" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL" description="MOD_DPSLIDER_SLIDE_DESC" filter="raw"/>
+				<field name="slide0" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide1" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide2" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide3" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide4" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide5" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide6" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide7" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide8" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+				<field name="slide9" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
+					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
 			</fieldset>
 		</fields>
 	</config>
 	<updateservers>
-    	<server type="extension" priority="1"
-        	name="DPSlider"><![CDATA[https://joomla.digital-peak.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=2]]></server>
+		<server type="extension" priority="1" name="DPSlider"><![CDATA[https://joomla.digital-peak.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=2]]></server>
 	</updateservers>
 </extension>
