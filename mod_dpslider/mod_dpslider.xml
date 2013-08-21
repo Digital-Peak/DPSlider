@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" method="upgrade"
+<extension type="module" version="3" method="upgrade"
 	client="site">
 	<name>MOD_DPSLIDER</name>
 	<author>Digital Peak</author>

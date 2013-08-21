@@ -10,11 +10,7 @@ defined('_JEXEC') or die();
 
 $doc = JFactory::getDocument();
 
-if (!version_compare(JVERSION, '3', 'ge') && !JFactory::getApplication()->get('jquery', false)) {
-	JFactory::getApplication()->get('jquery', true);
-	$doc->addScript(JURI::root().'modules/mod_dpslider/libraries/jquery/jquery.min.js');
-}
-$doc->addScript(JURI::root().'modules/mod_dpslider/libraries/jquery/dpNoConflict.js');
+JHtml::_('jquery.framework');
 
 $doc->addStyleSheet(JURI::root().'modules/mod_dpslider/tmpl/default.css');
 $doc->addScript(JURI::root().'modules/mod_dpslider/libraries/slider/slider.min.js');
@@ -25,14 +21,14 @@ $height = $params->get('height');
 
 $folder = $params->get('folder');
 
-$doc->addScriptDeclaration('dpjQuery(document).ready(function() {
-	var dpSlider'.$module->id.' = dpjQuery("#mod-dpslider-'.$module->id.'").swiper({
+$doc->addScriptDeclaration('jQuery(document).ready(function() {
+	var dpSlider'.$module->id.' = jQuery("#mod-dpslider-'.$module->id.'").swiper({
 		mode:"horizontal",calculateHeight: true,
 		loop: true,
 		pagination: ".mod-dpslider-pagination"
 	});
-	dpjQuery(".mod-dpslider-pagination .swiper-pagination-switch").click(function(){
-    	dpSlider'.$module->id.'.swipeTo(dpjQuery(this).index());
+	jQuery(".mod-dpslider-pagination .swiper-pagination-switch").click(function(){
+    	dpSlider'.$module->id.'.swipeTo(jQuery(this).index());
     })
 });');
 
