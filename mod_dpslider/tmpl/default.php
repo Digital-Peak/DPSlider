@@ -24,12 +24,19 @@ $folder = $params->get('folder');
 $doc->addScriptDeclaration('jQuery(document).ready(function() {
 	var dpSlider'.$module->id.' = jQuery("#mod-dpslider-'.$module->id.'").swiper({
 		mode:"horizontal",calculateHeight: true,
-		loop: true,
-		pagination: ".mod-dpslider-pagination"
+		loop: '.($params->get('loop', 1) == 1 ? 'true' : 'false').',
+		autoplay: '.($params->get('autoplay', '') ? $params->get('autoplay', '') : "''").',
+		pagination: "#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-pagination"
 	});
-	jQuery(".mod-dpslider-pagination .swiper-pagination-switch").click(function(){
+	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .swiper-pagination-switch").click(function(){
     	dpSlider'.$module->id.'.swipeTo(jQuery(this).index());
-    })
+    });
+	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-lt").click(function(){
+    	dpSlider'.$module->id.'.swipePrev();
+    });
+	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-gt").click(function(){
+    	dpSlider'.$module->id.'.swipeNext();
+    });
 });');
 
 //<div id="swiper-scrollbar-<php echo $module->id>" class="swiper-scrollbar"></div>
@@ -55,5 +62,5 @@ for ($i = 0; $i < 10; $i++) {
 ?>
   </div>
 </div>
-<p class="mod-dpslider-pagination"></p>
+<div class="mod-dpslider-pagination-container" id="mod-dpslider-pagination-container-<?php echo $module->id?>"><span class="mod-dpslider-lt">&lt;</span><span class="mod-dpslider-pagination"></span><span class="mod-dpslider-gt">&gt;</span></div>
 <?php echo $params->get('textafter')?>

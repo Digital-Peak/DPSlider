@@ -1,3 +1,13 @@
+.mod-dpslider-pagination-container {
+	text-align: center;
+	width: 100%
+}
+
+.mod-dpslider-lt,.mod-dpslider-gt {
+	cursor: pointer;
+	padding: 5px;
+}
+
 .mod-dpslider-pagination {
 	text-align: center;
 	margin-top: 5px;
@@ -13,6 +23,7 @@
 	margin: 0 3px;
 	cursor: pointer;
 }
+
 .mod-dpslider-pagination .swiper-active-switch {
-	background: #fff;2f9933
+	background-color: #fff;
 }
