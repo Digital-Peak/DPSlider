@@ -23,18 +23,21 @@ $folder = $params->get('folder');
 
 $doc->addScriptDeclaration('jQuery(document).ready(function() {
 	var dpSlider'.$module->id.' = jQuery("#mod-dpslider-'.$module->id.'").swiper({
-		mode:"horizontal",calculateHeight: true,
+		mode: "horizontal", calculateHeight: true, speed: 1000,
 		loop: '.($params->get('loop', 1) == 1 ? 'true' : 'false').',
 		autoplay: '.($params->get('autoplay', '') ? $params->get('autoplay', '') : "''").',
 		pagination: "#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-pagination"
 	});
 	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .swiper-pagination-switch").click(function(){
+    	dpSlider'.$module->id.'.stopAutoplay();
     	dpSlider'.$module->id.'.swipeTo(jQuery(this).index());
     });
 	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-lt").click(function(){
+    	dpSlider'.$module->id.'.stopAutoplay();
     	dpSlider'.$module->id.'.swipePrev();
     });
 	jQuery("#mod-dpslider-pagination-container-'.$module->id.' .mod-dpslider-gt").click(function(){
+    	dpSlider'.$module->id.'.stopAutoplay();
     	dpSlider'.$module->id.'.swipeNext();
     });
 });');
