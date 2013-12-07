@@ -12,7 +12,6 @@ $doc = JFactory::getDocument();
 
 JHtml::_('jquery.framework');
 
-$doc->addStyleSheet(JURI::root().'modules/mod_dpslider/tmpl/default.css');
 $doc->addScript(JURI::root().'modules/mod_dpslider/libraries/slider/slider.min.js');
 $doc->addStyleSheet(JURI::root().'modules/mod_dpslider/libraries/slider/slider.min.css');
 
