@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3" method="upgrade"
-	client="site">
+<extension type="module" version="3" method="upgrade" client="site">
 	<name>MOD_DPSLIDER</name>
 	<author>Digital Peak</author>
 	<creationDate>Nov 2013</creationDate>
@@ -27,20 +26,17 @@
 					description="MOD_DPSLIDER_WIDTH_DESC" />
 				<field name="height" type="text" label="MOD_DPSLIDER_HEIGHT_LABEL"
 					description="MOD_DPSLIDER_HEIGHT_DESC" />
-				<field name="loop" type="radio" class="btn-group"
-					default="1" label="MOD_DPSLIDER_LOOP_LABEL"
-					description="MOD_DPSLIDER_LOOP_DESC">
+				<field name="loop" type="radio" class="btn-group" default="1"
+					label="MOD_DPSLIDER_LOOP_LABEL" description="MOD_DPSLIDER_LOOP_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
 				<field name="autoplay" type="text" label="MOD_DPSLIDER_AUTOPLAY_LABEL"
 					description="MOD_DPSLIDER_AUTOPLAY_DESC" />
-				<field name="textbefore" type="textarea"
-					label="MOD_DPSLIDER_BEFORE_LABEL" description="MOD_DPSLIDER_BEFORE_DESC"
-					rows="5" cols="50" filter="raw" />
-				<field name="textafter" type="textarea"
-					label="MOD_DPSLIDER_AFTER_LABEL" description="MOD_DPSLIDER_AFTER_DESC"
-					rows="5" cols="50" filter="raw" />
+				<field name="textbefore" type="textarea" label="MOD_DPSLIDER_BEFORE_LABEL"
+					description="MOD_DPSLIDER_BEFORE_DESC" rows="5" cols="50" filter="raw" />
+				<field name="textafter" type="textarea" label="MOD_DPSLIDER_AFTER_LABEL"
+					description="MOD_DPSLIDER_AFTER_DESC" rows="5" cols="50" filter="raw" />
 				<field name="moduleclass_sfx" type="text"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 			</fieldset>
@@ -68,6 +64,13 @@
 					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
 				<field name="slide9" type="editor" label="MOD_DPSLIDER_SLIDE_LABEL"
 					description="MOD_DPSLIDER_SLIDE_DESC" filter="raw" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="show_on_start_page_only" type="radio" class="btn-group"
+					default="0" label="MOD_DPSLIDER_START_PAGE_LABEL" description="MOD_DPSLIDER_START_PAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>
