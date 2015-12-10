@@ -3,7 +3,7 @@
 /**
  * @package		DPSlider
  * @author		Digital Peak http://www.digital-peak.com
- * @copyright	Copyright (C) 2012 - 2014 Digital Peak. All rights reserved.
+ * @copyright	Copyright (C) 2012 - 2015 Digital Peak. All rights reserved.
  * @license		http://www.gnu.org/licenses/gpl.html GNU/GPL
  */
 
@@ -20,15 +20,19 @@ class DPSliderReleaseBuild
 		$dpVersion = new SimpleXMLElement(file_get_contents(dirname(__FILE__) . '/../mod_dpslider/mod_dpslider.xml'));
 		$dpVersion = (string) $dpVersion->version;
 
+		echo ' Creating version: ' . $dpVersion;
+
 		$dpVersion = str_replace('.', '_', $dpVersion);
 
 		exec('rm -rf ' . $buildDir . '/dist');
 		exec('rm -rf ' . $buildDir . '/build');
 
 		mkdir($buildDir . '/dist');
+		mkdir($buildDir . '/build');
+		$dpDir = $buildDir . '/build/DPSlider';
 		mkdir($dpDir);
 
-		$this->createZip($root . '/mod_dpslider', $buildDir . '/dist/mod_dpslider_' . $dpVersion . '.zip');
+		$this->createZip($buildDir . '/../mod_dpslider', $dpDir . '/mod_dpslider_' . $dpVersion . '.zip');
 	}
 
 	private function createZip ($folder, $zipFile, $excludes = array(), $substitutes = array())
